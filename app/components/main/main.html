@@ -1,0 +1,25 @@
+<ul class="button-list">
+  <li ng-repeat="activity in vm.activities">
+    <button ng-click="vm.setActive(activity)" class="button button-xlarge button-{{activity.color}}" ng-class="{'is-active': vm.isActive(activity)}">{{activity.name}}</button>
+  </li>
+</ul>
+<div class="flip-clock-container" ng-if="vm.hasActive()">
+  <dy-flip-clock time="{{vm.getDurationOfActiveActivity()}}"></dy-flip-clock>
+  <div class="panel panel-default panel-narrow panel-flat center-block">
+    <div class="panel-heading">
+      <h3 class="panel-title">Статистика</h3>
+    </div>
+    <div class="panel-body">
+      <ul class="list-unstyled">
+        <li ng-repeat="activity in vm.activities | orderBy:'duration':true" class="statistics-animation">
+            <h5>{{activity.name}}</h5>
+            <div class="progress">
+              <div class="progress-bar progress-bar-{{activity.color}}" style="width: {{vm.activities.getDurationInPct(activity)}}%">
+                {{activity.getDuration() | timeDuration}}
+              </div>
+            </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
