@@ -27,12 +27,12 @@
   workTimeTrackerRun.$inject = ['activitiesService'];
   function workTimeTrackerRun (activitiesService) {
     activitiesService.addNew('Работа', 'success');
-    activitiesService.addNew('Первый Обед', 'primary');
-    activitiesService.addNew('Второй Обед', 'primary');
-    activitiesService.addNew('Первая 10 минутка', 'info');
-    activitiesService.addNew('Вторая 10 минутка', 'info');
-    activitiesService.addNew('Третья 10 минутка', 'info');
-    activitiesService.addNew('Четвертая 10 минутка', 'info');
+    activitiesService.addNew('1 Обед', 'primary');
+    activitiesService.addNew('2 Обед', 'primary');
+    activitiesService.addNew('1 10 минутка', 'info');
+    activitiesService.addNew('2 10 минутка', 'info');
+    activitiesService.addNew('3 10 минутка', 'info');
+    activitiesService.addNew('4 10 минутка', 'info');
     activitiesService.addNew('Пожурчать', 'warning');
   }
 }());
