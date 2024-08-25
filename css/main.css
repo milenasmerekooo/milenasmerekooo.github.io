@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  padding: 140px 0 60px;
+  padding: 20px 0 60px;
   font-family: 'Raleway', sans-serif;
   color: #222222;
   transition: background-color 0.5s;
@@ -67,7 +67,7 @@ body {
 
 .flip-clock-container {
   width: 460px;
-  margin: 150px auto 0;
+  margin: 50px auto 0;
 }
 
 .menu-icons-panel {
